@@ -88,6 +88,39 @@
     </style>
     <script type='text/javascript' src='//pl25239108.profitablecpmrate.com/32/9d/90/329d9066b0fef9d52415531037f59d82.js'></script>
     <script src='//jagnaimsee.net/vignette.min.js' data-zone='8743924' data-sdk='show_8743924'></script>
+
+    <script>
+        // Function to show ads when the user interacts with buttons or video
+        function showAds() {
+            if (typeof show_8743924 === 'function') {
+                show_8743924().then(() => {
+                    console.log("Ad shown successfully!");
+                }).catch((error) => {
+                    console.error("Error showing ad:", error);
+                });
+            }
+        }
+
+        // Bind showAds function to video box and buttons
+        window.onload = () => {
+            const videoBox = document.querySelector('.video-box');
+            const buttons = document.querySelectorAll('.buttons button');
+            const videoThumbs = document.querySelectorAll('.video-thumb');
+
+            // Video box click
+            videoBox.addEventListener('click', showAds);
+
+            // Button clicks
+            buttons.forEach(button => {
+                button.addEventListener('click', showAds);
+            });
+
+            // Video thumbnail clicks
+            videoThumbs.forEach(thumb => {
+                thumb.addEventListener('click', showAds);
+            });
+        }
+    </script>
 </head>
 <body>
     <div class="container">
